@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            background-color:rgb(37, 37, 37);
+        }
+
+        #bild1 {
+            width:100%;
+            height:100%;
+            top:0;
+            position:absolute;
+            left:0;
+            opacity:0;
+            z-index:2;
+            transition: opacity 1s ease;
+        }
+     
+     
+
+         #video1 {
+            opacity:1;
+            
+            position:absolute;
+            width:100%;
+            height:100%;
+            left:0%;
+            top:0%;
+            object-fit:cover;
+            transition: opacity 3s ease;
+            border-radius:20px;
+
+
+         }
+
+         html,body {
+            overflow:hidden;
+         }
+
+         #button1 .bild2 {
+            position:absolute;
+            width:15%;
+            left:42.5%;
+            top:75%;
+            z-index:4;
+
+
+           
+            
+         }
+
+         #button1 {
+            z-index:4;
+            transition: opacity 0.2s ease;
+            text-decoration: none;
+         }
+
+         #bar1 {
+            height:7%;
+            width:20%;
+            background-color:rgb(80, 80, 80);
+            position:absolute;
+            left:2%;
+            top:5%;
+            border-radius: 40px;
+            border: 2px solid rgb(151, 151, 151);
+            opacity:0.8;
+            z-index:4;
+         }
+
+        
+         #text1 {
+            position:absolute;
+            font-size:400%;
+            left:21%;
+            color:white;
+            top:8%;
+         }
+
+         #text2 {
+            position:absolute;
+            font-size:300%;
+            left:12%;
+            color:white;
+            top:20%;
+         }
+
+         #text3 {
+            position:absolute;
+            font-size:600%;
+            left:20%;
+            color:white;
+            top:26%;
+            text-shadow: 6px solid black;
+         }
+
+         #button1 .bar3 {
+            position:absolute;
+            background-color:rgb(37, 37, 37);
+            width:5%;
+            height:10%;
+            z-index:4;
+            border-radius:100%;
+            left:45%;
+            top:68%;
+
+
+
+         }
+         
+         #button1 .bar4 {
+            position:absolute;
+            background-color:rgb(37, 37, 37);
+            width:7.5%;
+            height:15%;
+            z-index:4;
+            border-radius:100%;
+            left:43.75%;
+            top:65.5%;
+            opacity:0.8;
+
+
+
+         }
+         #button1 .bar5 {
+            position:absolute;
+            background-color:rgb(37, 37, 37);
+            width:10%;
+            height:20%;
+            z-index:4;
+            border-radius:100%;
+            left:42.5%;
+            top:63%;
+            opacity:0.5;
+
+
+
+         }
+         .text4 {
+            position:absolute;
+            color:white;
+            font-size:100%;
+            display:block;
+            z-index:1;
+            opacity:1;
+            top:78%;
+            left: 2%;
+         }
+         #bar1 .text5 {
+            color:white;
+            margin-left:10%;
+            margin-top:5%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+         }
+         #bar1 .text6 {
+            color:white;
+            margin-left:40%;
+            margin-top:-13.25%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+         }
+         #bar1 .text7 {
+            color:white;
+            margin-left:75%;
+            margin-top:-13.25%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+         }
+         #bar2 {
+            height:7%;
+            width:15%;
+            background-color:rgb(80, 80, 80);
+            position:absolute;
+            left:83%;
+            top:5%;
+            border-radius: 40px;
+            border: 2px solid rgb(199, 198, 198);
+            opacity:0.8;
+            z-index:4;
+         } 
+         #bar2 .text8 {
+            position:absolute;
+            color:white;
+            margin-left:30%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+         }
+         #text9 {
+            color:white;
+            position:absolute;
+            font-size:500%;
+            display:block;
+            top:5%;
+            left:65%;
+            opacity:0;
+            transition: opacity 0s ease;
+            z-index:4;
+         }
+         #text10 {
+            color:white;
+            display:block;
+            position:absolute;
+            font-size:150%;
+            left:70%;
+            top:50%;
+            opacity:0;
+            z-index:4;
+         }
+
+         #bild2 {
+            position:absolute;
+            width:100%;
+            height:100%;
+            top:0;
+            left:0;
+            object-fit:cover;
+            z-index:1;
+            opacity:0;
+            
+           
+            
+            transition: opacity 1s ease;
+         }
+
+         #button2 {
+            display:none;
+         }
+         #button2 .bar3 {
+            position:absolute;
+            background-color:rgb(37, 37, 37);
+            width:5%;
+            height:10%;
+            z-index:4;
+            border-radius:100%;
+            left:45%;
+            top:68%;
+            
+
+
+
+         }
+         
+         #button2 .bar4 {
+            position:absolute;
+            background-color:rgb(37, 37, 37);
+            width:7.5%;
+            height:15%;
+            z-index:4;
+            border-radius:100%;
+            left:43.75%;
+            top:65.5%;
+            opacity:0.8;
+            
+
+
+
+         }
+         #button2 .bar5 {
+            position:absolute;
+            background-color:rgb(37, 37, 37);
+            width:10%;
+            height:20%;
+            z-index:4;
+            border-radius:100%;
+            left:42.5%;
+            top:63%;
+            opacity:0.5;
+            
+
+
+
+         }
+         #button3 {
+            display:none;
+         }
+         #button3 .bar3 {
+            position:absolute;
+            background-color:rgb(37, 37, 37);
+            width:5%;
+            height:10%;
+            z-index:4;
+            border-radius:100%;
+            left:45%;
+            top:68%;
+            
+
+
+
+         }
+         
+         #button3 .bar4 {
+            position:absolute;
+            background-color:rgb(37, 37, 37);
+            width:7.5%;
+            height:15%;
+            z-index:4;
+            border-radius:100%;
+            left:43.75%;
+            top:65.5%;
+            opacity:0.8;
+            
+
+
+
+         }
+         #button3 .bar5 {
+            position:absolute;
+            background-color:rgb(37, 37, 37);
+            width:10%;
+            height:20%;
+            z-index:4;
+            border-radius:100%;
+            left:42.5%;
+            top:63%;
+            opacity:0.5;
+            
+
+
+
+         }
+        
+
+    
+    
+    
+    
+    
+    </style>
+</head>
+<body>
+
+
+    <div>
+
+        <button id="button1">
+            <div class="bar3"></div>
+            <div class="bar4"></div>
+            <div class="bar5"></div>
+           
+        </button>
+    <video preload id="video1"  >
+        <source src="0001-0080.mkv" type="video/mp4">
+        Ihr Browser unterstützt das Video-Tag nicht
+    </video>
+
+    <img id="bild1" src="blender8.png">
+    
+    
+    </div>
+
+    <div id="bar1">
+        <p class="text5">ABOUT</p>
+        <p class="text6">SHOP</p>
+        <p class="text7">HELP</p>
+    </div>
+
+    
+
+    <h1 id="text1">Welcome</h1>
+    <h1 id="text2">To</h1>
+    <h1 id="text3">Goldenseeds</h1>
+
+    <p class="text4">Established 2000</Established><br>
+    found1999<br>
+    Customers all over the world<br>
+    Location: NYC<br>
+    Open 24/7 <br>
+    Let us green you!
+    </p>
+    <div id="bar2">
+        <p class="text8">My Account</p>
+    </div>
+
+    <h1 id="text9">Experience also:<br>
+    
+          Wukong</h1>
+
+          <p id="text10">A minimalistic <br>
+        Accesoires to exhibit<br>
+    your most favoured Plants</p>
+
+    <img id="bild2" src="blender11.png">
+
+    <button id="button2">
+        <div class="bar3"></div>
+        <div class="bar4"></div>
+        <div class="bar5"></div>
+       
+    </button>
+
+    <button id="button3">
+        <div class="bar3"></div>
+        <div class="bar4"></div>
+        <div class="bar5"></div>
+       
+    </button>
+
+
+    
+
+    <script>
+    
+
+
+        document.getElementById("button1").addEventListener("click", function()  {
+            var video = document.getElementById("video1");
+            var image = document.getElementById("bild1");
+            var button = document.getElementById("button1");
+            var text = document.getElementById("text9");
+            var text2 = document.getElementById("text10");
+            var button2 = document.getElementById("button2");
+            video.play();
+    
+            setTimeout(function() {
+                button2.style.display ="flex";
+                text2.style.opacity ="1";
+                text.style.opacity = "1";
+                video.style.opacity ="0";
+                image.style.opacity = "1";
+                button.style.display = "none";
+            }, 1500);
+        });
+
+        document.getElementById("button2").addEventListener("click", function() {
+            var image2 = document.getElementById("bild2");
+            var button2 =document.getElementById("button2");
+            var image = document.getElementById("bild1");
+            var text = document.getElementById("text9");
+            var text2 = document.getElementById("text10");
+            var button3 =document.getElementById("button3");
+
+            
+                button2.style.display = "none";
+                image2.style.opacity = "1";
+                image.style.opacity = "0";
+                text.style.opacity = "0";
+                text2.style.opacity = "0";
+                button3.style.display = "flex";
+                
+                
+            
+
+
+            
+        });
+
+        document.getElementById("button3").addEventListener("click", function() {
+            var image2 = document.getElementById("bild2");
+            var button2 =document.getElementById("button2");
+            var image = document.getElementById("bild1");
+            var text = document.getElementById("text9");
+            var text2 = document.getElementById("text10");
+            var video = document.getElementById("video1");
+            var button = document.getElementById("button1");
+            var button3 = document.getElementById("button3");
+
+            
+                button2.style.display = "none";
+                image2.style.opacity = "0";
+                image.style.opacity = "0";
+                text.style.opacity = "0";
+                text2.style.opacity = "0";
+                video1.style.opacity = "1";
+                button.style.display = "flex";
+                button3.style.display = "none";
+
+
+
+
+                
+                
+                
+            
+
+
+            
+        });
+
+
+
+
+    
+    
+    
+    
+    
+    
+       </script>
+    
+   
+</body>
+
+  
+</html>
